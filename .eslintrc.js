@@ -1,3 +1,6 @@
+/*
+ * @Date: 2020-08-03 14:31:15
+ */
 module.exports = {
   root: true,
   env: {
@@ -8,7 +11,6 @@ module.exports = {
     parser: "babel-eslint",
   },
   rules: {
-    semi: false,
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },

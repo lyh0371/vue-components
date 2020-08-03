@@ -1,8 +1,12 @@
+<!--
+ * @Date: 2020-08-03 14:31:15
+-->
 <template>
   <div>
-    <label v-if="label">{{ label }} </label>
-    <slot></slot>
-    <p v-if="error">{{ error }}</p>
+    <div class="formitem">
+      <label v-if="label">{{ label }}</label> <slot></slot>
+    </div>
+    <p v-if="error" class="error">{{ error }}</p>
   </div>
 </template>
 
@@ -48,3 +52,19 @@ export default {
   }
 }
 </script>
+
+<style scope>
+.formitem {
+  display: flex;
+  padding: 10px;
+}
+label {
+  padding-right: 20px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 60px;
+}
+</style>
