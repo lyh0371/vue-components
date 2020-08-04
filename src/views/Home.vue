@@ -4,6 +4,11 @@
 <template>
   <div class="home">
     <l-form></l-form>
+    <p @click="$store.commit('add')">{{$store.state.num}}</p>
+    <p @click="$store.dispatch('add')">{{$store.state.num}}</p>
+    <p @click="$store.dispatch('add')">{{$store.getters.num}}</p>
+
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
@@ -18,7 +23,9 @@ export default {
     return {}
   },
   created() {},
-  methods: {}
+  methods: {
+   
+  }
 }
 </script>
 
